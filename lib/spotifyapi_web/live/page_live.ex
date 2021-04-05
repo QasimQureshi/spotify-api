@@ -14,6 +14,18 @@ defmodule SpotifyapiWeb.PageLive do
   @impl true
   def handle_event("search", %{"q" => query}, socket) do
     case search(query) do
+      # params = [access_token: "2"]
+      # %{
+      #   "q" => query,
+      # } = response
+      
+      # url = "https://api.spotify.com/v1/artists"
+      # url = "https://api.spotify.com/v1/search"
+      
+
+      # {:ok, response} <- HTTPoison.get(url, headers, params: params)
+      # Poison.decode(response.body)
+
       %{^query => vsn} ->
         {:noreply, redirect(socket, external: "https://hexdocs.pm/#{query}/#{vsn}")}
 
