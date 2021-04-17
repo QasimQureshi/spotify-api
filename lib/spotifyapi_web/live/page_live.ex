@@ -25,9 +25,11 @@ defmodule SpotifyapiWeb.PageLive do
 
       # {:ok, response} <- HTTPoison.get(url, headers, params: params)
       # Poison.decode(response.body)
-
+        # "BQCzsUez9Xv26VNl0l5hWOEiAfM1Jh4tBo7SzMoSpE0kviUI4k9MvXdR_n8PhgDH3XaTrjY6GUBG-kk_vXs
       %{^query => vsn} ->
         {:noreply, redirect(socket, external: "https://hexdocs.pm/#{query}/#{vsn}")}
+        # {:noreply, redirect(socket, external: "https://hexdocs.pm/#{query}/#{vsn}")}
+        # https://api.spotify.com/v1/search
 
       _ ->
         {:noreply,

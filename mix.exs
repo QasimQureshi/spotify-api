@@ -20,7 +20,7 @@ defmodule Spotifyapi.MixProject do
   def application do
     [
       mod: {Spotifyapi.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :spotify_ex]
     ]
   end
 
@@ -44,7 +44,8 @@ defmodule Spotifyapi.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:httpoison, "~> 1.7"}
+      {:httpoison, "~> 1.0.0"},
+      {:spotify_ex, "~>2.2.0"}
     ]
   end
 
